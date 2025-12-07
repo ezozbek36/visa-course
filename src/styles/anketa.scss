@@ -90,7 +90,7 @@
       height: 50px;
       padding: 0 15px;
       border-radius: 7px;
-      border: 1px solid #B9B8B8;
+      border: 1px solid #b9b8b8;
       font-family: 'Involve', $font-main;
       font-size: 12px;
       font-weight: 400;
@@ -110,11 +110,20 @@
       &--phone {
          padding-left: 80px;
       }
+
+      &[type='number'] {
+         -moz-appearance: textfield;
+
+         &::-webkit-outer-spin-button,
+         &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+         }
+      }
    }
 
    &__phone {
       position: relative;
-
    }
 
    &__phone-prefix {
@@ -136,7 +145,7 @@
       height: 82px;
       padding: 15px;
       border-radius: 7px;
-      border: 1px solid #B9B8B8;
+      border: 1px solid #b9b8b8;
       font-family: 'Involve', $font-main;
       font-size: 12px;
       font-weight: 400;

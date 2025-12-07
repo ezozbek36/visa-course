@@ -12,9 +12,16 @@
 		scroll-snap-type: x mandatory;
 		scrollbar-width: none;
 		-ms-overflow-style: none;
+		cursor: grab;
 
 		&::-webkit-scrollbar {
 			display: none;
+		}
+
+		&.active {
+			cursor: grabbing;
+			cursor: -webkit-grabbing;
+			transform: scale(1);
 		}
 	}
 
@@ -67,6 +74,7 @@
 		border-radius: 20px;
 		object-fit: cover;
 		display: block;
+		pointer-events: none;
 
 		&::selection {
 			display: none;

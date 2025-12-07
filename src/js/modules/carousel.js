@@ -32,6 +32,39 @@ function initCarousel() {
 				cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
 			})
 		})
+
+		// Mouse Drag Functionality
+		let isDown = false
+		let startX
+		let scrollLeft
+
+		carouselContainer.addEventListener('mousedown', e => {
+			isDown = true
+			carouselContainer.classList.add('active')
+			carouselContainer.style.scrollSnapType = 'none'
+			startX = e.pageX - carouselContainer.offsetLeft
+			scrollLeft = carouselContainer.scrollLeft
+		})
+
+		carouselContainer.addEventListener('mouseleave', () => {
+			isDown = false
+			carouselContainer.classList.remove('active')
+			carouselContainer.style.scrollSnapType = ''
+		})
+
+		carouselContainer.addEventListener('mouseup', () => {
+			isDown = false
+			carouselContainer.classList.remove('active')
+			carouselContainer.style.scrollSnapType = ''
+		})
+
+		carouselContainer.addEventListener('mousemove', e => {
+			if (!isDown) return
+			e.preventDefault()
+			const x = e.pageX - carouselContainer.offsetLeft
+			const walk = (x - startX) * 2 // Scroll speed multiplier
+			carouselContainer.scrollLeft = scrollLeft - walk
+		})
 	}
 }
 
