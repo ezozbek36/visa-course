@@ -1,0 +1,157 @@
+@use './fonts.scss';
+@use './variables' as *;
+@use './shared';
+
+.landing-page--anketa {
+   .header {
+      padding-top: 20px;
+      margin-bottom: 23px;
+   }
+
+   .carousel-cards {
+      margin-bottom: 24px;
+   }
+
+   .anketa-form {
+      margin-bottom: 37px;
+   }
+}
+
+.form-intro {
+   padding: 0 47px;
+   text-align: center;
+   margin-bottom: 20px;
+
+   &__title {
+      font-family: $font-display;
+      font-size: 33px;
+      font-weight: 900;
+      line-height: normal;
+      text-transform: uppercase;
+      color: $color-text;
+   }
+
+   &__title-highlight {
+      color: $color-primary;
+   }
+}
+
+.anketa-form {
+   padding: 0 47px;
+   margin-bottom: 37px;
+
+   &__container {
+      width: 100%;
+      max-width: 396px;
+      border-radius: 25px;
+      border: 2px solid $color-primary;
+      padding: 30px 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+   }
+
+   &__heading {
+      font-family: $font-display;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: normal;
+      text-transform: uppercase;
+      color: $color-text;
+      text-align: center;
+      width: 100%;
+   }
+}
+
+.form {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+
+   &__group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 100%;
+   }
+
+   &__label {
+      font-family: 'Involve', $font-main;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 100%;
+      color: $color-text;
+   }
+
+   &__input {
+      width: 100%;
+      height: 50px;
+      padding: 0 15px;
+      border-radius: 7px;
+      border: 1px solid #B9B8B8;
+      font-family: 'Involve', $font-main;
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-text;
+      background: #f6f6f6;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &::placeholder {
+         color: #929292;
+      }
+
+      &:focus {
+         border-color: $color-primary;
+      }
+
+      &--phone {
+         padding-left: 80px;
+      }
+   }
+
+   &__phone {
+      position: relative;
+
+   }
+
+   &__phone-prefix {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      border-radius: 6px;
+      padding: 16px;
+      font-family: 'Involve', $font-main;
+      font-size: 16px;
+      font-weight: 400;
+      color: $color-text;
+      pointer-events: none;
+      background: #ddd;
+   }
+
+   &__textarea {
+      height: 82px;
+      padding: 15px;
+      border-radius: 7px;
+      border: 1px solid #B9B8B8;
+      font-family: 'Involve', $font-main;
+      font-size: 12px;
+      font-weight: 400;
+      color: $color-text;
+      background: #f6f6f6;
+      outline: none;
+      resize: none;
+      transition: border-color 0.3s ease;
+
+      &::placeholder {
+         color: #929292;
+      }
+
+      &:focus {
+         border-color: $color-primary;
+      }
+   }
+}

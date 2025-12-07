@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uz">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="YouViza kursiga yozilish uchun anketani to'ldiring." />
+		<title>Anketa - YouViza Viza Menejer Kursi 2026</title>
+		<link rel="stylesheet" href="/src/styles/anketa.scss" />
+	</head>
+	<body>
+		<div class='landing-page landing-page--anketa'>
+			{{> "src/components/header.hbs"}}
+			{{> "src/anketa.hbs"}}
+			<footer class='footer'>
+				<p class='footer__text'>24 soatdan so'ng qabul yopiladi: <span class='footer__timer'>23:59:59</span></p>
+			</footer>
+		</div>
+		<script defer src='/assets/carousel.min.js'></script>
+		<script defer src="/assets/countdown.min.js"></script>
+		<script defer src='/assets/form.min.js'></script>
+	</body>
+</html>

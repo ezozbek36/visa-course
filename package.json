@@ -1,0 +1,23 @@
+{
+	"name": "visa-course",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build && npm run build:scripts",
+		"preview": "vite preview",
+		"build:scripts": "npm run build:carousel && npm run build:countdown && npm run build:form",
+		"build:carousel": "cross-env ENTRY=carousel vite build --config vite.scripts.config.js",
+		"build:countdown": "cross-env ENTRY=countdown vite build --config vite.scripts.config.js",
+		"build:form": "cross-env ENTRY=form vite build --config vite.scripts.config.js"
+	},
+	"devDependencies": {
+		"@vituum/vite-plugin-handlebars": "^1.1.0",
+		"cross-env": "^10.1.0",
+		"sass-embedded": "^1.93.3",
+		"vite": "^7.2.4",
+		"vite-plugin-html-minifier": "^1.0.5",
+		"vituum": "^1.2.0"
+	}
+}

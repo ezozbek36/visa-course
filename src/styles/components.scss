@@ -1,0 +1,75 @@
+.carousel-cards {
+	padding: 0 48px;
+	margin-top: 23px;
+	margin-bottom: 50px;
+	overflow: hidden;
+	position: relative;
+
+	&__container {
+		display: flex;
+		gap: 0;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&__divider {
+		flex: 0 0 20px;
+	}
+
+	&__indicators {
+		position: absolute;
+		bottom: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		z-index: 2;
+	}
+
+	&__indicator {
+		width: 30px;
+		height: 5px;
+		flex-shrink: 0;
+		border-radius: 50px;
+		background: #FFFFFF;
+		opacity: 0.5;
+		transition: opacity 0.3s ease;
+		cursor: pointer;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+}
+
+.carousel-card {
+	position: relative;
+	flex-shrink: 0;
+	width: 100%;
+	height: 193px;
+	scroll-snap-align: start;
+
+	&:last-child {
+		padding-right: 0;
+	}
+
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		object-fit: cover;
+		display: block;
+
+		&::selection {
+			display: none;
+		}
+	}
+}
