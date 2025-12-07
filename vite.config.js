@@ -5,6 +5,7 @@ import vituum from 'vituum'
 
 export default defineConfig(({ mode }) => ({
 	appType: 'mpa',
+	base: '/visa-course/dist',
 	plugins: [
 		...(mode === 'production' ? [vituum()] : []),
 		handlebars(),
