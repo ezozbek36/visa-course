@@ -1,0 +1,98 @@
+<style>
+	/* Shared Critical CSS Base - DRY Pattern */
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		font-family:
+			'Involve',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			sans-serif;
+		background: #ffffff;
+		color: #00153d;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.landing-page {
+		max-width: 490px;
+		margin: 0 auto;
+		background: #ffffff;
+		min-height: 100vh;
+	}
+
+	/* Header - Shared */
+	.header {
+		padding: 22px 20px 0;
+		margin-bottom: 33px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.header__badge {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 8px 20px;
+		border-radius: 5px;
+		border: 1px solid #2f72f5;
+		font-family: 'Kuunari', 'Involve', sans-serif;
+		font-size: 22px;
+		font-weight: 700;
+		background: linear-gradient(180deg, rgba(47, 114, 245, 0.5) 0%, rgba(47, 114, 245, 0) 50%), linear-gradient(180deg, #003087 0%, #00153d 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: transparent;
+	}
+
+	/* CTA Button - Shared */
+	.cta-button {
+		width: 100%;
+		max-width: 409px;
+		height: 110px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20px;
+		background: linear-gradient(131deg, #2f72f5 0%, #5991ff 50.02%, #2f72f5 100%);
+		box-shadow:
+			0 4px 0 0 #2558ba,
+			0 4px 20px 0 rgba(47, 114, 245, 0.5);
+		border: none;
+		cursor: pointer;
+		font-family: 'Big Shoulders Display', Impact, sans-serif;
+		font-size: 32px;
+		font-weight: 800;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #ffffff;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	@media (max-width: 375px) {
+		.cta-button {
+			font-size: 24px;
+		}
+	}
+
+	.cta-button--medium {
+		height: 78px;
+		border-radius: 10px;
+		font-size: 28px;
+		max-width: 319px;
+	}
+</style>
