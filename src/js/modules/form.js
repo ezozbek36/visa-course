@@ -1,6 +1,6 @@
 function initForm() {
 	const form = document.querySelector('.form')
-	const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzozAvG6wpvXgh0npHZpaJZCcGQv6uO4s-e70TJf1sTzaFo86slzw9T3di2fqPjgejs/exec'
+	const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxtYQsaT5VlDwbGbWDPBVNQt4p5FUkH4YUwPZ7KjPRTCsgO6lp7dKgX7cv78R7gnX5J/exec'
 
 	if (form) {
 		// Money formatting (Thousands separator)
