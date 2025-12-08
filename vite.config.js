@@ -5,6 +5,7 @@ import vituum from 'vituum'
 
 export default defineConfig(({ mode }) => ({
 	appType: 'mpa',
+	base: process.env.BASE_URL || '/',
 	plugins: [
 		...(mode === 'production' ? [vituum()] : []),
 		handlebars(),
