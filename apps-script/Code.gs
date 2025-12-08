@@ -33,7 +33,7 @@ function saveToSheet(data) {
 	}
 
 	if (sheet.getLastRow() === 0) {
-		const headers = ['Timestamp', 'Name', 'Phone', 'City', 'Current Income', 'Target Income', 'Motivation', 'Offline Study']
+		const headers = ['Name', 'Phone', 'City', 'Current Income', 'Target Income', 'Motivation', 'Offline Study', 'Timestamp']
 		sheet.appendRow(headers)
 
 		const headerRange = sheet.getRange(1, 1, 1, headers.length)
