@@ -8,7 +8,12 @@ export default defineConfig(({ mode }) => ({
 	base: process.env.BASE_URL || '/',
 	plugins: [
 		...(mode === 'production' ? [vituum()] : []),
-		handlebars(),
+		handlebars({
+			context: {
+				base: process.env.BASE_URL || '/',
+				isProd: mode === 'production',
+			},
+		}),
 		htmlMinifier({
 			minify: true,
 		}),

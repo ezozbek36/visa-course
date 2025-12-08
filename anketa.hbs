@@ -17,9 +17,9 @@
 			</footer>
 		</div>
 		{{#if isProd}}
-			<script defer src='/assets/carousel.min.js'></script>
-			<script defer src="/assets/countdown.min.js"></script>
-			<script defer src='/assets/form.min.js'></script>
+			<script defer src='{{base}}assets/carousel.min.js'></script>
+			<script defer src="{{base}}assets/countdown.min.js"></script>
+			<script defer src='{{base}}assets/form.min.js'></script>
 		{{else}}
 			<script type='module'>
 				import '/src/js/modules/carousel.js'
