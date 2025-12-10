@@ -16,9 +16,7 @@
 		<div class='landing-page'>
 			{{> "src/components/header.hbs"}}
 			{{> "src/main.hbs"}}
-			<footer class='footer'>
-				<p class='footer__text'>24 soatdan so'ng qabul yopiladi: <span class='footer__timer'>23:59:59</span></p>
-			</footer>
+			{{> "src/components/footer.hbs"}}
 		</div>
 		{{#if isProd}}
 			<script defer src='{{base}}assets/carousel.min.js'></script>

@@ -85,6 +85,13 @@ def main():
             # Text from: cta-button, anketa-form__heading
             "text": "kursga qatnashish ma'lumotlaringizni kiritib ularni bizga yuboring ma'lumotlarni yuborish".upper(),
             "output": os.path.join(script_dir, 'subset-BigShouldersDisplay-ExtraBold.woff2')
+        },
+        {
+            "name": "RFDewiCondensed-Bold.woff2",
+            "path": os.path.join(project_root, 'public', 'fonts', 'subset-RFDewiCondensed-Bold.woff2'),
+            # Text from: footer__text
+            "text": "soatdan so'ng qabul yopiladi: 1234567890".upper(),
+            "output": os.path.join(script_dir, 'subset-RFDewiCondensed-Bold.woff2')
         }
     ]
 
