@@ -87,11 +87,46 @@ def main():
             "output": os.path.join(script_dir, 'subset-BigShouldersDisplay-ExtraBold.woff2')
         },
         {
-            "name": "RFDewiCondensed-Bold.woff2",
+            "name": "RFDewiCondensed-Bold",
             "path": os.path.join(project_root, 'public', 'fonts', 'subset-RFDewiCondensed-Bold.woff2'),
             # Text from: footer__text
-            "text": "soatdan so'ng qabul yopiladi: 1234567890".upper(),
+            "text": "soatdan so'ng qabul yopiladi: 1234567890",
             "output": os.path.join(script_dir, 'subset-RFDewiCondensed-Bold.woff2')
+        },
+        {
+            "name": "Inter-Medium",
+            "path": os.path.join(project_root, 'public', 'fonts', 'subset-Inter-Medium.woff2'),
+            # Text from: hero__description, feature-card__text
+            "text": "Harakatni hozirdan boshlang! Bu yildagi so'nggi offlayn guruhga qo'shilish uchun quyidagi anketani to'ldiring Kurs to'liq 2 haftada tugatiladi. Kun-ora yangi mavzular o'rganasiz Shengen vizalari 100% 0 dan o'rgatiladi. Booking, Avia bilet, hujjat ishlari to'liq o'rgatiladi Sotuv, Consulting ochib yurgazishni o'rganasiz",
+            "output": os.path.join(script_dir, 'subset-Inter-Medium.woff2')
+        },
+        {
+            "name": "Inter-SemiBold",
+            "path": os.path.join(project_root, 'public', 'fonts', 'subset-Inter-SemiBold.woff2'),
+            # Text from: instructor__name-badge, stat-card__label
+            "text": "Qobil Qosimovich Muvaffaqiyatli Visa Sohadagi tajriba",
+            "output": os.path.join(script_dir, 'subset-Inter-SemiBold.woff2')
+        },
+        {
+            "name": "Inter-Bold",
+            "path": os.path.join(project_root, 'public', 'fonts', 'subset-Inter-Bold.woff2'),
+            # Text from: hero__description strong
+            "text": "so'nggi offlayn guruh",
+            "output": os.path.join(script_dir, 'subset-Inter-Bold.woff2')
+        },
+        {
+            "name": "Involve-Regular",
+            "path": os.path.join(project_root, 'public', 'fonts', 'subset-Involve-Regular.woff2'),
+            # Text from: form inputs, placeholders, phone prefix
+            "text": "Ismingiz +998 12 345 67 89 Misol: Farg'ona 10 000 000 20 000 000 Qisqacha javobingizni kiriting Javobingizni kiriting",
+            "output": os.path.join(script_dir, 'subset-Involve-Regular.woff2')
+        },
+        {
+            "name": "Involve-Medium",
+            "path": os.path.join(project_root, 'public', 'fonts', 'subset-Involve-Medium.woff2'),
+            # Text from: form labels
+            "text": "Ismingizni kiriting Telefon raqamingiz: Qaysi shahardansiz? Hozirgi oylik daromadingiz Maqsad qilgan daromadingiz Nega aynan Viza menejer kasbiga qiziqasiz Toshkentda 2 hafta davomida offlayn o'qiy olasizmi",
+            "output": os.path.join(script_dir, 'subset-Involve-Medium.woff2')
         }
     ]
 

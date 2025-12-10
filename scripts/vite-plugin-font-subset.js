@@ -31,7 +31,7 @@ export default function fontSubsetPlugin() {
 			}
 		} else {
 			const baseUrl = config.base.endsWith('/') ? config.base : config.base + '/'
-			return `url('${baseUrl}fonts/subset-${fontName}.woff2}')`
+			return `url('${baseUrl}fonts/subset-${fontName}.woff2')`
 		}
 	}
 
