@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import fs from 'fs'
 
 const entries = {
 	carousel: resolve(__dirname, 'src/js/modules/carousel.js'),

@@ -3,6 +3,8 @@ import htmlMinifier from 'vite-plugin-html-minifier'
 import { defineConfig } from 'vite'
 import vituum from 'vituum'
 
+import fontSubsetPlugin from './scripts/vite-plugin-font-subset.js'
+
 export default defineConfig(({ mode }) => ({
 	appType: 'mpa',
 	base: process.env.BASE_URL || '/',
@@ -17,6 +19,7 @@ export default defineConfig(({ mode }) => ({
 		htmlMinifier({
 			minify: true,
 		}),
+		fontSubsetPlugin(),
 	],
 	build: {
 		rollupOptions:
