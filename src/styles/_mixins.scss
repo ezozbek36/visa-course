@@ -1,52 +1,36 @@
-@use "sass:math";
+@use 'sass:math';
 @use './variables' as *;
 
 @function rem($px) {
-   @return math.div($px, 16)+rem;
+	@return math.div($px, 16) + rem;
 }
 
 @function em($px, $base: 16) {
-   @return math.div($px, $base)+em;
+	@return math.div($px, $base) + em;
 }
 
-@mixin adaptiv-value($property,
-   $startSize,
-   $minSize,
-   $startWidth: $containerWidth,
-   $endWidth: $minWidth,
-   $type: 1) {
-   $addSize: $startSize - $minSize;
-   $endSize: $startWidth - $endWidth;
+@function fluid($startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth) {
+	@if ($startSize==$minSize) {
+		@return rem($startSize);
+	}
 
-   @if $type==0 {
-      #{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($endWidth)}) / #{$endSize});
-   }
+	$addSize: $startSize - $minSize;
+	$widthDiff: $widthFrom - $widthTo;
 
-   @else if $type==1 {
-      #{$property}: rem($startSize);
+	$slope: math.div($addSize, $widthDiff);
+	$yIntersection: $minSize - ($slope * $widthTo);
 
-      @media (max-width: em($startWidth, 16)) {
-         #{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($endWidth)}) / #{$endSize});
-      }
-   }
-
-   @else if $type==2 {
-      #{$property}: rem($startSize);
-
-      @media (min-width: em($startWidth, 16)) {
-         #{$property}: calc(#{rem($minSize)} + #{$addSize} * (100vw - #{rem($endWidth)}) / #{$endSize});
-      }
-   }
+	@return calc(#{rem($yIntersection)} + #{$slope * 100}vw);
 }
 
 @mixin flex-column-center {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 @mixin flex-center {
-   display: flex;
-   justify-content: center;
-   align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
