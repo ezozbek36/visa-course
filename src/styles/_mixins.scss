@@ -11,7 +11,7 @@
 
 @function fluid($startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth) {
 	@if ($startSize==$minSize) {
-		@return rem($startSize);
+		@return #{$startSize}px;
 	}
 
 	$addSize: $startSize - $minSize;
@@ -20,7 +20,7 @@
 	$slope: math.div($addSize, $widthDiff);
 	$yIntersection: $minSize - ($slope * $widthTo);
 
-	@return calc(#{rem($yIntersection)} + #{$slope * 100}vw);
+	@return calc(#{$yIntersection}px + #{$slope * 100}vw);
 }
 
 @mixin flex-column-center {
