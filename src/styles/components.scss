@@ -11,37 +11,22 @@
 
 	&__container {
 		display: flex;
-		gap: 0;
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-		scrollbar-width: none;
-		-ms-overflow-style: none;
-		cursor: grab;
-
-		&::-webkit-scrollbar {
-			display: none;
-		}
-
-		&.active {
-			cursor: grabbing;
-			cursor: -webkit-grabbing;
-			transform: scale(1);
-		}
+		/* swiper overrides */
+		box-sizing: content-box;
 	}
 
 	&__divider {
-		@media (max-width: 480px) {
-			flex: 0 0 20px;
-		}
+		display: none; // No longer needed with Swiper spaceBetween
 	}
 
 	&__indicators {
 		position: absolute;
 		bottom: 5px;
-		left: 50%;
-		transform: translateX(-50%);
-		display: flex;
+		left: 0;
+		width: 100% !important;
+		display: flex !important;
 		align-items: center;
+		justify-content: center;
 		gap: 5px;
 		z-index: 2;
 	}
@@ -55,9 +40,11 @@
 		opacity: 0.5;
 		transition: opacity 0.3s ease;
 		cursor: pointer;
+		margin: 0 !important; // Override swiper default margins
 
 		&--active {
 			opacity: 1;
+			background: #ffffff;
 		}
 	}
 }
