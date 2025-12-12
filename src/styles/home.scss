@@ -87,7 +87,7 @@
 	width: 100%;
 	max-width: 313px;
 	border-radius: 65px;
-	min-height: 273px;
+	min-height: clamp(256px, mixins.fluid(273, 256), 313px);
 	height: auto;
 	border-top: 1px solid $color-primary;
 	border-bottom: 1px solid $color-primary;
