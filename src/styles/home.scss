@@ -8,7 +8,7 @@
 
 	&__title {
 		font-family: $font-display;
-		font-size: clamp(24px, mixins.fluid(33, 24), 33px);
+		font-size: clamp(20.5px, mixins.fluid(33, 20.5), 33px);
 		font-weight: 900;
 		line-height: 120%;
 
@@ -22,7 +22,7 @@
 
 	&__description {
 		font-family: $font-main;
-		font-size: 16px;
+		font-size: clamp(14.5px, mixins.fluid(16, 14.5), 16px);
 		font-weight: 500;
 		line-height: 130%;
 		color: $color-text;

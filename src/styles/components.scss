@@ -1,22 +1,14 @@
+@use 'mixins';
+
 .carousel-cards {
-	padding: 0 20px;
-	margin-top: 23px;
-	margin-bottom: 50px;
 	overflow: hidden;
 	position: relative;
-
-	@media (max-width: 480px) {
-		padding: 0;
-	}
+	margin: 23px clamp(5px, mixins.fluid(20, 5), 20px) 50px;
 
 	&__container {
 		display: flex;
 		/* swiper overrides */
 		box-sizing: content-box;
-	}
-
-	&__divider {
-		display: none; // No longer needed with Swiper spaceBetween
 	}
 
 	&__indicators {
